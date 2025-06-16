@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobro</title>
+  <link rel="stylesheet" href="cobro.css">
+</head>
+<body>
+  <div class="cobro-container">
+    <!-- Encabezado -->
+    <header class="cobro-header">
+      <button class="menu-btn">☰</button>
+      <h1>Cobro</h1>
+      <img src="logo.png" alt="Arygatos Logo" class="logo">
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="cobro-content">
+      <!-- Tabla y buscador -->
+      <div class="product-area">
+        <table class="product-table">
+          <thead>
+            <tr>
+              <th>PRODUCTO</th>
+              <th>CANT</th>
+              <th>$</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Arena para gatos</td><td>2</td><td>$85</td></tr>
+            <tr><td>Rascador mediano</td><td>1</td><td>$250</td></tr>
+            <tr><td>Lata de comida premium</td><td>3</td><td>$28</td></tr>
+          </tbody>
+        </table>
+        <div class="bottom-bar">
+          <div class="search-box">
+            <input type="text" placeholder="Buscar">
+            <button><i>🔍</i></button>
+          </div>
+          <button class="finalize-btn">Finalizar compra</button>
+        </div>
+      </div>
+
+      <!-- Panel de totales -->
+      <aside class="summary-panel">
+        <h2>Total:</h2>
+        <div class="price-box">$504</div>
+
+        <h2>IVA (16%):</h2>
+        <div class="price-box">$80.64</div>
+
+        <h2>Importe total:</h2>
+        <div class="price-box total">$584.64</div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

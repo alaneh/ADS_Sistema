@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  background-color: #f5f5f5;
+}
+
+.dashboard-container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #4A0072;
+  color: white;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.logo {
+  width: 100px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.menu a:hover {
+  background-color: #6a1b9a;
+}
+
+.logout-button {
+  margin-top: auto;
+  background-color: #ff4f4f;
+  border: none;
+  padding: 0.75rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.top-bar h1 {
+  color: #4A0072;
+  font-size: 1.5rem;
+}
+
+.top-logo {
+  width: 60px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  display: none;
+}
+
+/* Options grid */
+.options-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.option-card {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  width: 200px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.option-card:hover {
+  transform: scale(1.05);
+}
+
+.option-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .option-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
