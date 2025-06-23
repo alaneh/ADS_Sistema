@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modificar producto</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="modificar_producto.css" />
+  <script defer src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <main class="modificar-container">
+    <header class="header">
+      <button id="menuToggle" class="menu-btn"><i class="fas fa-bars"></i></button>
+      <h1>Modificar producto</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="input-group">
+          <label>Nombre:</label>
+          <input type="text" placeholder="Agregar texto" />
+        </div>
+        <div class="input-group">
+          <label>Cantidad:</label>
+          <input type="number" value="43" />
+        </div>
+        <div class="input-group">
+          <label>Categoría:</label>
+          <select>
+            <option>Seleccionar</option>
+            <option>Alimentos</option>
+            <option>Juguetes</option>
+            <option>Accesorios</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label>Proveedor:</label>
+          <input type="text" placeholder="Agregar texto" />
+        </div>
+        <div class="input-group">
+          <label>Promoción:</label>
+          <input type="text" placeholder="Agregar texto" />
+        </div>
+        <div class="input-group">
+          <label>Precio de venta:</label>
+          <input type="text" placeholder="Agregar texto" />
+        </div>
+        <div class="input-group">
+          <label>Costo de compra:</label>
+          <input type="text" placeholder="Agregar texto" />
+        </div>
+      </div>
+
+      <div class="form-buttons">
+        <a href="index.html" class="btn-red">Regresar</a>
+        <button class="btn-green" id="guardarBtn">Guardar</button>
+      </div>
+    </div>
+
+    <div class="historial-card">
+      <h2>Historial de modificaciones:</h2>
+      <div class="historial-table">
+        <table>
+          <tr><td>Usuario que lo modificó:</td><td>carlos_admin</td></tr>
+          <tr><td>Nombre:</td><td>Croquetas Premium para Gato 1.5kg</td></tr>
+          <tr><td>Proveedor:</td><td>GatoFeliz</td></tr>
+          <tr><td>Precio de venta:</td><td>$135.00 MXN</td></tr>
+          <tr><td>Cantidad:</td><td>26 unidades</td></tr>
+          <tr><td>Promoción:</td><td>2x1 hasta el 30 de mayo</td></tr>
+          <tr><td>Costo de compra:</td><td>$75.00</td></tr>
+          <tr><td>Categoría:</td><td>Mascotas</td></tr>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("guardarBtn").addEventListener("click", () => {
+      Swal.fire({
+        icon: 'success',
+        title: 'Producto actualizado 😺',
+        showConfirmButton: false,
+        timer: 1500
+      });
+    });
+  </script>
+</body>
+</html>

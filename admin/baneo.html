@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baneo de clientes</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="baneo.css" />
+  <script defer src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content baneo-container">
+    <header class="baneo-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Baneo de clientes</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <form class="baneo-form" id="formBaneo">
+      <div class="form-group">
+        <label>Cliente:</label>
+        <input type="text" required placeholder="Agregar texto">
+      </div>
+
+      <div class="form-group">
+        <label>Motivo:</label>
+        <select required>
+          <option value="">Seleccionar</option>
+          <option value="robo">Robo</option>
+          <option value="estafa">Estafa</option>
+          <option value="agresion">Agresión</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+
+      <div class="form-group full-width">
+        <label>Contraseña del gerente:</label>
+        <input type="password" required placeholder="Agregar texto">
+      </div>
+
+      <div class="form-buttons">
+        <a href="index.html" class="btn-red">Cancelar</a>
+        <button type="submit" class="btn-green">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("formBaneo");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+          title: 'Cliente baneado 🐱',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#62019e'
+        });
+
+        // En el futuro aquí se conectará con el backend para registrar el baneo
+      });
+    });
+  </script>
+</body>
+</html>

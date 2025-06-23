@@ -1,0 +1,113 @@
+.modificar-container {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+.form-card {
+  background: white;
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.input-group input,
+.input-group select {
+  padding: 0.5rem;
+  border: 2px solid #3a2d99;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn-red, .btn-green {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-red {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn-green {
+  background-color: #b2fcd2;
+  color: black;
+}
+
+/* Historial */
+.historial-card {
+  background: white;
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.historial-card h2 {
+  color: #62019e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.historial-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.historial-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}

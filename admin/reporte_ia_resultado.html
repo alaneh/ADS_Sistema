@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reportes</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="reporte_ia_resultado.css" />
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido -->
+  <div class="main-content ia-resultado-container">
+    <header class="ia-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Reportes</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <div class="ia-resultado-wrapper">
+      <section class="ticket">
+        <pre><strong>Reporte</strong>
+
+<b>AryGatos</b>
+Fecha   01/05/25   a   01/06/25
+
+Total de ventas    $8,320.00
+Descuentos         $350.00
+Ventas netas       $7,970.00
+Productos vendidos 124 unidades
+Tickets emitidos   37
+        </pre>
+      </section>
+
+      <div class="resumen-box">
+        <p>--</p>
+      </div>
+    </div>
+
+    <div class="ia-buttons">
+      <button onclick="window.print()" class="btn-green">Imprimir PDF</button>
+      <a href="reporte_ia.html" class="btn-green">Nuevo reporte</a>
+      <a href="index.html" class="btn-red">Regresar</a>
+    </div>
+  </div>
+</body>
+</html>

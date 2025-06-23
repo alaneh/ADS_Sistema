@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Principal - Administrador</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <script defer src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido -->
+  <div class="main-content admin-container">
+    <header class="admin-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Bienvenido <span class="rol">Administrador</span></h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <section class="admin-cards">
+      <a href="./alta.html"><div class="card primary" id="btnAlta"><i class="fas fa-box-open"></i><span>Alta de producto</span></div></a>
+      <a href="./modificar_producto.html"><div class="card"><i class="fas fa-edit"></i><span>Modificación de producto</span></div></a>
+      <a href="./gestion_cajeros.html"><div class="card primary"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div></a>
+      <a href="./baneo.html"><div class="card"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div></a>
+      <a href="./reporte.html"><div class="card primary"><i class="fas fa-warehouse"></i><span>Reportes de inventario</span></div></a>
+      <a href="./reporte_ia.html"><div class="card"><i class="fas fa-robot"></i><span>Reportes de IA</span></div></a>
+    </section>
+  </div>
+
+  <!-- Modal de Alta -->
+  <div class="modal-overlay" id="modalAlta">
+    <div class="modal-content">
+      <p><strong>¿Desea dar de alta un nuevo producto?</strong></p>
+      <div class="modal-buttons">
+        <button class="cancel-btn" id="cancelAlta">Cancelar</button>
+        <button class="confirm-btn" id="confirmAlta">Continuar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

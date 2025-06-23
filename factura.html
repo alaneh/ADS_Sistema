@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Factura</title>
+  <link rel="stylesheet" href="factura.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <!-- Overlay para modales -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer lateral -->
+  <div class="drawer" id="drawer">
+    <img src="logoBlanco.png" alt="Logo Arygatos" class="logo"/>
+    <div class="menu-option"><i class="fas fa-dollar-sign"></i><span>Cobro</span></div>
+    <div class="menu-option"><i class="fas fa-clipboard-list"></i><span>Inventario</span></div>
+    <div class="menu-option"><i class="fas fa-credit-card"></i><span>Cierre de caja</span></div>
+    <div class="menu-option"><i class="fas fa-comments-dollar"></i><span>Reembolso</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <div class="factura-container">
+    <header class="factura-header">
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <img src="logo.png" alt="Logo Arygatos" class="logo-header"/>
+    </header>
+
+    <main class="factura-grid">
+      <!-- Ticket -->
+      <section class="ticket">
+        <div class="ticket-header">
+          <strong>AryGatos</strong><br>
+          Dirección: Calle Gatería 123, Gatópolis<br>
+          RFC: ARGG850402KZ5<br>
+          Teléfono: 1010101011
+        </div>
+
+        <div class="ticket-meta">
+          <span>10/04/25</span>
+          <span>13:15 p.m</span>
+        </div>
+
+        <table class="ticket-table">
+          <thead>
+            <tr>
+              <th>Cant</th>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>2</td><td>Arena para gato (10kg)</td><td>$85.00</td><td>$170.00</td></tr>
+            <tr><td>1</td><td>Rascador mediano</td><td>$250.00</td><td>$250.00</td></tr>
+            <tr><td>3</td><td>Lata comida premium</td><td>$28.00</td><td>$84.00</td></tr>
+          </tbody>
+        </table>
+
+        <div class="ticket-totals">
+          <p><strong>Subtotal:</strong> $504.00</p>
+          <p><strong>IVA (16%):</strong> $80.64</p>
+          <p><strong>Total:</strong> $584.64</p>
+        </div>
+
+        <div class="ticket-footer">
+          <p><strong>Gracias por tu compra en AryGatos 🐾</strong></p>
+          <div class="barcode">
+            5901234123457
+          </div>
+        </div>
+      </section>
+
+      <!-- Pregunta de facturación -->
+      <section class="factura-prompt">
+        <h2>¿Desea facturar?</h2>
+        <div class="factura-buttons">
+          <a href="factura_form.html"><button class="btn-si">SI</button></a>
+          <button class="btn-no">NO</button>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

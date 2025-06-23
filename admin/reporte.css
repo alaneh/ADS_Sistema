@@ -1,0 +1,76 @@
+.reporte-container {
+  padding: 1.5rem;
+}
+
+.reporte-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+.reporte-card {
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.reporte-card h2 {
+  margin-bottom: 1.5rem;
+  color: #2c005a;
+}
+
+.reporte-card select {
+  width: 70%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 2px solid #3a2d99;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.reporte-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-red, .btn-green {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-red {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn-green {
+  background-color: #b2fcd2;
+  color: black;
+}

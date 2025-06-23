@@ -1,0 +1,95 @@
+.detalle-container {
+  padding: 1.5rem;
+}
+
+.detalle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+.detalle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.ticket {
+  background: white;
+  border: 2px solid #62019e;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 400px;
+  font-family: monospace;
+  font-size: 0.95rem;
+}
+
+.ticket pre {
+  white-space: pre-wrap;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn-green, .btn-red {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-green {
+  background-color: #b2fcd2;
+  color: black;
+}
+
+.btn-red {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .ticket, .ticket * {
+    visibility: visible;
+  }
+
+  .ticket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 1px;
+  }
+}
+

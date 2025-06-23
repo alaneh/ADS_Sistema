@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reporte IA</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="reporte_ia.css" />
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido -->
+  <div class="main-content ia-container">
+    <header class="ia-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Reporte IA</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <section class="ia-card">
+      <h2>Seleccionar Tiempo:</h2>
+      <div class="ia-fechas">
+        <label for="fechaInicio">Inicio</label>
+        <input type="date" id="fechaInicio" required>
+
+        <label for="fechaFin">Fin</label>
+        <input type="date" id="fechaFin" required>
+      </div>
+
+      <div class="ia-buttons">
+        <a href="index.html" class="btn-red">Cancelar</a>
+        <button class="btn-green" id="enviarIA">Enviar</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const enviar = document.getElementById("enviarIA");
+
+      enviar.addEventListener("click", () => {
+        const inicio = document.getElementById("fechaInicio").value;
+        const fin = document.getElementById("fechaFin").value;
+
+        if (!inicio || !fin) {
+          alert("Por favor selecciona ambas fechas.");
+          return;
+        }
+
+        if (inicio > fin) {
+          alert("La fecha de inicio no puede ser posterior a la de fin.");
+          return;
+        }
+
+        // En producción esto se pasaría al backend
+        window.location.href = "reporte_ia_resultado.html";
+      });
+    });
+  </script>
+</body>
+</html>

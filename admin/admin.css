@@ -1,0 +1,128 @@
+a{
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color:white;
+}
+
+.admin-container {
+  padding: 1.5rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+.rol {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.admin-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: #ccc;
+  color: #2c005a;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 180px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.card.primary {
+  background: #62019e;
+  color: white;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+}
+
+.modal-overlay.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #62019e;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.cancel-btn, .confirm-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.confirm-btn {
+  background-color: #b2fcd2;
+  color: black;
+}

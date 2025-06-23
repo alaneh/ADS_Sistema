@@ -1,103 +1,241 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
   height: 100vh;
+}
+
+/* ========== Drawer ========== */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background: #420177;
+  color: white;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding: 1rem 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
 }
 
-.container {
-  display: flex;
-  width: 90%;
-  max-width: 1200px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-  flex-wrap: wrap;
-}
-
-.image-section {
-  flex: 2;
-  background-color: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-section img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.login-section {
-  flex: 1;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.login-box {
-  width: 100%;
-  max-width: 300px;
-  text-align: center;
+.drawer.open {
+  left: 0;
 }
 
 .logo {
   width: 100px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.login-form input {
+.menu-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+  cursor: pointer;
   width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.forgot-password {
-  display: block;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-  color: #6a1b9a;
+  padding: 0.5rem 1rem;
+  color: white;
   text-decoration: none;
 }
 
-.login-form button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #6a1b9a;
-  color: white;
+.menu-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-option i {
+  font-size: 1.5rem;
+}
+
+.logout-button {
+  background: #f35444;
   border: none;
-  border-radius: 20px;
-  font-size: 1rem;
+  color: white;
+  padding: 10px;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* ========== Overlay ========== */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* ========== Main Layout ========== */
+.main {
+  padding: 1rem;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #62019e;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .image-section {
-    height: 200px;
-  }
-
-  .image-section img {
-    height: 100%;
-  }
+.top-logo {
+  width: 50px;
+  margin-left: auto;
 }
-button:hover{
-    background-color: #8130b2;
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #62019e;
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 200px;
+  max-width: 250px;
+  min-width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Modal General ========== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* ========== Modal Cobro ========== */
+.modal-content.cobro {
+  background: #62019e;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 300px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  z-index: 1002;
+  position: relative;
+}
+
+.modal-content.cobro textarea {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  resize: none;
+  color: #333;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn.cancel {
+  background: #f55f5f;
+  color: white;
+}
+
+.btn.send {
+  background: #b0f7c6;
+  color: black;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .top-logo {
+    display: none;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main {
+    padding: 1rem 0.5rem;
+  }
+
+  .drawer {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .menu-option {
+    flex-direction: column;
+    font-size: 0.9rem;
+  }
+
+  .logout-button {
+    width: auto;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Principal - Cliente</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="cliente.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer lateral -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-hand-holding-usd"></i><span>Dinero prestado disponible</span></div>
+    <div class="menu-option"><i class="fas fa-key"></i><span>Cambiar contraseña</span></div>
+    <div class="menu-option"><i class="fas fa-undo"></i><span>Devolver producto</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido principal -->
+  <div class="main-content cliente-container">
+    <header class="cliente-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Bienvenido <span class="nombre-cliente">"Cliente"</span></h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <section class="cliente-cards">
+      <a href="./dinero.html"><div class="card"><i class="fas fa-hand-holding-usd"></i><span>Dinero prestado<br>disponible</span></div></a>
+      <div class="card"><i class="fas fa-key"></i><span>Cambiar<br>contraseña</span></div>
+      <a href="./devolver.html"><div class="card"><i class="fas fa-undo"></i><span>Devolver<br>producto</span></div></a>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+.metodo-container {
+  padding: 1.5rem;
+}
+
+.metodo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #62019e;
+  cursor: pointer;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.5rem;
+}
+
+.metodo-card {
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.metodo-card h2 {
+  margin-bottom: 2rem;
+  color: #2c005a;
+}
+
+.metodo-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn-cash, .btn-credito {
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  min-width: 120px;
+}
+
+.btn-cash {
+  background-color: #2ecc71;
+}
+
+.btn-credito {
+  background-color: #3498db;
+}

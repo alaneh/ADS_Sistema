@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cierre de caja</title>
+  <link rel="stylesheet" href="cierre.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Drawer lateral -->
+  <div class="drawer" id="drawer">
+    <img src="logoBlanco.png" alt="Logo Arygatos" class="logo"/>
+    <div class="menu-option"><i class="fas fa-dollar-sign"></i><span>Cobro</span></div>
+    <div class="menu-option"><i class="fas fa-clipboard-list"></i><span>Inventario</span></div>
+    <div class="menu-option"><i class="fas fa-credit-card"></i><span>Cierre de caja</span></div>
+    <div class="menu-option"><i class="fas fa-comments-dollar"></i><span>Reembolso</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+  <div class="cierre-container">
+    <header class="cierre-header">
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <h1>Cierre de caja</h1>
+      <img src="logo.png" alt="Logo Arygatos" class="logo-header">
+    </header>
+
+    <main class="cierre-card">
+      <h2 class="cierre-title">🐾 AryGatos - Cierre de Caja</h2>
+
+      <div class="cierre-meta">
+        <p><strong>Caja:</strong> #001</p>
+        <p><strong>Fecha:</strong> 18/05/2025</p>
+        <p><strong>Hora de cierre:</strong> 20:05:13</p>
+        <p><strong>Usuario:</strong> Arycat</p>
+      </div>
+
+      <div class="cierre-tablas">
+        <div>
+          <h3>Resumen de Caja</h3>
+          <p>Valor inicial: $1,000.00</p>
+          <p>Ingresos: $5,250.00</p>
+          <p>Egresos: $850.00</p>
+          <p><strong>Total en caja:</strong> $5,400.00</p>
+        </div>
+
+        <div>
+          <h3>Desglose de Ingresos</h3>
+          <p>Efectivo: $3,100.00</p>
+          <p>Tarjeta: $1,500.00</p>
+          <p>Crédito: $650.00</p>
+          <p><strong>Total ingresos:</strong> $5,250.00</p>
+        </div>
+      </div>
+
+      <div class="cierre-botones">
+        <button class="btn-print" onclick="window.print()">Imprimir PDF</button>
+        <button class="btn-close">Cerrar caja</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

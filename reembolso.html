@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reembolso</title>
+  <link rel="stylesheet" href="reembolso.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="logoBlanco.png" alt="Logo Arygatos" class="logo"/>
+    <div class="menu-option"><i class="fas fa-dollar-sign"></i><span>Cobro</span></div>
+    <div class="menu-option"><i class="fas fa-clipboard-list"></i><span>Inventario</span></div>
+    <div class="menu-option"><i class="fas fa-credit-card"></i><span>Cierre de caja</span></div>
+    <div class="menu-option"><i class="fas fa-comments-dollar"></i><span>Reembolso</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <div class="reembolso-container">
+    <!-- Encabezado -->
+    <header class="reembolso-header">
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <h1>Reembolso</h1>
+      <img src="logo.png" alt="Logo Arygatos" class="logo-header">
+    </header>
+
+    <!-- Formulario -->
+    <main class="reembolso-card">
+      <form>
+        <label for="cliente">Cliente:</label>
+        <input type="text" id="cliente" placeholder="Agregar texto" />
+
+        <div class="form-buttons">
+          <button type="button" class="btn-cancelar">Cancelar</button>
+          <button type="button" class="btn-siguiente">Siguiente</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

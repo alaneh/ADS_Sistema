@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Cajeros</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="gestion_cajeros.css" />
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <main class="container">
+    <header class="header">
+      <button id="menuToggle" class="menu-btn"><i class="fas fa-bars"></i></button>
+      <h1>Gestión de cajeros</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <div class="card-container">
+      <a href="modificar_cajero.html" class="card purple">
+        <i class="fas fa-user-edit"></i>
+        <span>Modificación</span>
+      </a>
+      <a href="alta_cajero.html" class="card white">
+        <i class="fas fa-user-check"></i>
+        <span>Alta</span>
+      </a>
+      <a href="baja_cajero.html" class="card purple">
+        <i class="fas fa-user-times"></i>
+        <span>Baja</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

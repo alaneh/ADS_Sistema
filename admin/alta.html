@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alta de producto</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="alta.css" />
+  <script defer src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Formulario de Alta -->
+  <div class="main-content alta-container">
+    <header class="alta-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Alta de producto</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <form class="alta-form" id="formAlta">
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" required placeholder="Agregar texto" />
+      </div>
+
+      <div class="form-group">
+        <label>Cantidad:</label>
+        <input type="number" min="1" value="1" required />
+      </div>
+
+      <div class="form-group">
+        <label>Categoría:</label>
+        <select required>
+          <option value="">Seleccionar</option>
+          <option value="alimento">Alimento</option>
+          <option value="accesorio">Accesorio</option>
+          <option value="juguete">Juguete</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Proveedor:</label>
+        <input type="text" required placeholder="Agregar texto" />
+      </div>
+
+      <div class="form-group">
+        <label>Promoción:</label>
+        <input type="text" placeholder="Agregar texto" />
+      </div>
+
+      <div class="form-group">
+        <label>Precio de venta:</label>
+        <input type="number" step="0.01" required placeholder="Agregar texto" />
+      </div>
+
+      <div class="form-group">
+        <label>Costo de compra:</label>
+        <input type="number" step="0.01" required placeholder="Agregar texto" />
+      </div>
+
+      <div class="form-buttons">
+        <a href="index.html"><button type="button" class="btn-red">Regresar</button></a>
+        <button type="submit" class="btn-green">Guardar</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("formAlta");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        Swal.fire({
+          title: 'Producto dado de alta 🐱',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          confirmButtonColor: '#62019e'
+        });
+
+        // Aquí irá la integración con Java/JSP
+      });
+    });
+  </script>
+</body>
+</html>

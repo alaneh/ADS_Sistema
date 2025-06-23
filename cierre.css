@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+  height: 100vh;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* ========== Drawer ========== */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background: #420177;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer .logo {
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-button {
+  background: #f35444;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* Layout */
+.cierre-container {
+  padding: 1rem;
+}
+
+.cierre-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #62019e;
+  cursor: pointer;
+}
+
+.logo-header {
+  width: 70px;
+}
+
+.cierre-card {
+  background: white;
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.cierre-title {
+  text-align: center;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.cierre-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.cierre-tablas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+.cierre-tablas h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cierre-botones {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-print,
+.btn-close {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-print {
+  background-color: #b2fcd2;
+  color: #000;
+}
+
+.btn-close {
+  background-color: #95f5be;
+  color: #000;
+}
+
+/* Print */
+@media print {
+  .menu-btn, .drawer, .btn-print, .btn-close {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .cierre-card {
+    border: none;
+    box-shadow: none;
+  }
+}

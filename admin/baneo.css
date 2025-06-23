@@ -1,0 +1,98 @@
+a{
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color:white;
+}
+.baneo-container {
+  padding: 1.5rem;
+}
+
+.baneo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+.baneo-form {
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 45%;
+}
+
+.full-width {
+  flex: 1 1 100%;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border: 2px solid #3a2d99;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex: 1 1 100%;
+  margin-top: 1rem;
+}
+
+.btn-red, .btn-green {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-red {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn-green {
+  background-color: #b2fcd2;
+  color: black;
+}

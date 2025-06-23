@@ -1,0 +1,94 @@
+a{
+  color: white;
+  text-decoration: none;
+}
+a:visited{
+  color:white;
+}
+.alta-container {
+  padding: 1.5rem;
+}
+
+.alta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-header {
+  width: 60px;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #62019e;
+  cursor: pointer;
+}
+
+h1 {
+  color: #62019e;
+  font-size: 1.6rem;
+}
+
+/* Formulario */
+.alta-form {
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  max-width: 950px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.7rem;
+  border: 2px solid #3a2d99;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Botones */
+.form-buttons {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-red, .btn-green {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-red {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn-green {
+  background-color: #b2fcd2;
+  color: black;
+}

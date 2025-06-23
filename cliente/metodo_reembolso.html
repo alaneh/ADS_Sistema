@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Devolver producto</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="metodo_reembolso.css" />
+  <script defer src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-hand-holding-usd"></i><span>Dinero prestado disponible</span></div>
+    <div class="menu-option"><i class="fas fa-key"></i><span>Cambiar contraseña</span></div>
+    <div class="menu-option"><i class="fas fa-undo"></i><span>Devolver producto</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <div class="main-content metodo-container">
+    <header class="metodo-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Devolver producto</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <section class="metodo-card">
+      <h2>Método de reembolso</h2>
+      <div class="metodo-buttons">
+        <button class="btn-cash">Cash</button>
+        <button class="btn-credito">Crédito</button>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cashBtn = document.querySelector(".btn-cash");
+      const creditBtn = document.querySelector(".btn-credito");
+
+      cashBtn?.addEventListener("click", () => {
+        Swal.fire({
+          title: 'La solicitud ha sido emitida,',
+          text: 'lleve su producto a caja para completar la devolución 🐱.',
+          icon: 'success',
+          confirmButtonColor: '#62019e',
+          confirmButtonText: 'OK'
+        });
+      });
+
+      creditBtn?.addEventListener("click", () => {
+        // Aquí irá la lógica del JSP para decidir el resultado
+        const creditLimitExceeded = false; // esto vendrá del backend
+
+        if (creditLimitExceeded) {
+          Swal.fire({
+            icon: 'warning',
+            title: 'El valor de su crédito supera el límite permitido de $500.00 🐱.',
+            text: 'La devolución se realizará en efectivo. Lleve su producto a caja para completar la devolución.',
+            confirmButtonText: 'OK',
+            confirmButtonColor: '#62019e'
+          });
+        } else {
+          Swal.fire({
+            title: 'La solicitud ha sido emitida,',
+            text: 'lleve su producto a caja para completar la devolución 🐱.',
+            icon: 'success',
+            confirmButtonColor: '#62019e',
+            confirmButtonText: 'OK'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

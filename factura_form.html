@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Factura</title>
+  <link rel="stylesheet" href="factura_form.css" />
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <!-- Drawer lateral -->
+  <div class="drawer" id="drawer">
+    <img src="logoBlanco.png" alt="Logo Arygatos" class="logo"/>
+    <div class="menu-option"><i class="fas fa-dollar-sign"></i><span>Cobro</span></div>
+    <div class="menu-option"><i class="fas fa-clipboard-list"></i><span>Inventario</span></div>
+    <div class="menu-option"><i class="fas fa-credit-card"></i><span>Cierre de caja</span></div>
+    <div class="menu-option"><i class="fas fa-comments-dollar"></i><span>Reembolso</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+    <div class="overlay" id="overlay"></div>
+  <div class="form-container">
+    <!-- Encabezado -->
+    <header class="form-header">
+      <button class="menu-btn" id="menuToggle">☰</button>
+      <img src="logo.png" alt="Logo Arygatos" class="logo-header"/>
+    </header>
+
+    <!-- Formulario -->
+    <main class="form-card">
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="rfc">RFC :</label>
+            <input type="text" id="rfc" placeholder="Agregar texto" />
+          </div>
+
+          <div class="form-group">
+            <label for="regimen">Régimen fiscal :</label>
+            <input type="text" id="regimen" placeholder="Agregar texto" />
+          </div>
+
+          <div class="form-group">
+            <label for="cp">Código postal :</label>
+            <input type="text" id="cp" placeholder="Agregar texto" />
+          </div>
+
+          <div class="form-group">
+            <label for="direccion">Dirección :</label>
+            <input type="text" id="direccion" placeholder="Agregar texto" />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <a href="imprimir_ticket.html"><button type="submit" class="btn-guardar">Guardar</button></a>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>

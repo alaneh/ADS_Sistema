@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Principal - Cajero</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    
+  <!-- Drawer lateral oculto -->
+  <div class="drawer" id="drawer">
+    <img src="logoBlanco.png" alt="Logo Arygatos" class="logo"/>
+    <a href="cobro.html" class="menu-option"><i class="fas fa-dollar-sign"></i><span>Cobro</span></a>
+    <a href="inventario.html" class="menu-option"><i class="fas fa-clipboard-list"></i><span>Inventario</span></a>
+    <a href="cierre.html" class="menu-option"><i class="fas fa-credit-card"></i><span>Cierre de caja</span></a>
+    <a href="reembolso.html" class="menu-option"><i class="fas fa-comments-dollar"></i><span>Reembolso</span></a>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Contenido principal -->
+  <div class="main">
+    <header>
+      <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Bienvenido - Caja #</h1>
+      <img src="logo.png" alt="Logo Arygatos" class="top-logo"/>
+    </header>
+
+    <div class="card-container">
+      <div class="card" id="cardCobro">
+        <i class="fas fa-dollar-sign"></i><span>Cobro</span>
+      </div>
+      <a href="inventario.html" class="card">
+        <i class="fas fa-clipboard-list"></i><span>Inventario</span>
+      </a>
+      <a href="cierre.html" class="card">
+        <i class="fas fa-credit-card"></i><span>Cierre de caja</span>
+      </a>
+      <a href="reembolso.html" class="card">
+        <i class="fas fa-comments-dollar"></i><span>Reembolso</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal de Cobro -->
+  <div class="modal" id="modalCobro">
+    <div class="modal-content cobro">
+      <h2>Agregar cuenta del cliente.</h2>
+      <textarea placeholder="Agregar texto"></textarea>
+      <div class="modal-actions">
+        <a href="cobro.html" class="btn cancel">Cancelar</a>
+        <a href="cobro.html" class="btn send">Enviar</a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

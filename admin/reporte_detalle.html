@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reporte inventario</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="reporte_detalle.css" />
+  <script defer src="../js/script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-box-open"></i><span>Alta de producto</span></div>
+    <div class="menu-option"><i class="fas fa-edit"></i><span>Modificación de producto</span></div>
+    <div class="menu-option"><i class="fas fa-users-cog"></i><span>Gestión de cajeros</span></div>
+    <div class="menu-option"><i class="fas fa-user-slash"></i><span>Baneo de clientes</span></div>
+    <div class="menu-option"><i class="fas fa-cogs"></i><span>Variables del sistema</span></div>
+    <div class="menu-option"><i class="fas fa-chart-line"></i><span>Acceso de reportes</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <!-- Contenido -->
+  <div class="main-content detalle-container">
+    <header class="detalle-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Reporte inventario</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <div class="detalle-wrapper">
+      <section class="ticket">
+        <pre><strong>Reporte</strong>
+
+7501234567890
+Croquetas Gato Premium 1.5kg
+Alimentos
+Stock: 26
+Precio de venta: $135.00
+Precio de compra: $75.00
+Proveedor: GatoFeliz S.A.
+Última Actualización: 2025-05-17 18:32
+
+Alertas de Inventario
+• Productos con stock bajo:
+  · Arena Absorbente 5kg (Stock: 5)
+  · Shampoo Gato 250ml (Stock: 3)
+
+• Productos sin stock:
+  · Juguete ratón con catnip
+  · Desparasitante Oral 10ml
+        </pre>
+      </section>
+
+      <section class="acciones">
+        <button onclick="window.print()" class="btn-green">Imprimir PDF</button>
+        <a href="reporte.html" class="btn-green">Nuevo reporte</a>
+        <a href="index.html" class="btn-red">Regresar</a>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

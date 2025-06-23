@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+  height: 100vh;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 1000;
+}
+
+.overlay.show {
+  display: block;
+}
+
+/* Drawer */
+.drawer {
+  position: fixed;
+  top: 0;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background: #420177;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  transition: left 0.3s ease-in-out;
+  z-index: 1001;
+}
+
+.drawer.open {
+  left: 0;
+}
+
+.drawer .logo {
+  width: 100px;
+  margin-bottom: 2rem;
+}
+
+.menu-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logout-button {
+  background: #f35444;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-top: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 80%;
+}
+
+/* Encabezado */
+.reembolso-container {
+  padding: 1.5rem;
+}
+
+.reembolso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #62019e;
+  cursor: pointer;
+}
+
+.logo-header {
+  width: 70px;
+}
+
+h1 {
+  color: #62019e;
+}
+
+/* Tarjeta */
+.reembolso-card {
+  border: 2px solid #62019e;
+  border-radius: 20px;
+  padding: 2rem;
+  background: white;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.reembolso-card label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.reembolso-card input {
+  width: 80%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border: 2px solid #3a2d99;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+/* Botones */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btn-cancelar,
+.btn-siguiente {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cancelar {
+  background: #ff6b6b;
+  color: white;
+}
+
+.btn-siguiente {
+  background: #b2fcd2;
+  color: black;
+}

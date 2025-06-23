@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cambiar contraseña</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="cambiar.css" />
+  <script defer src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Drawer -->
+  <div class="drawer" id="drawer">
+    <img src="../assets/logoBlanco.png" alt="Logo Arygatos" class="logo" />
+    <div class="menu-option"><i class="fas fa-hand-holding-usd"></i><span>Dinero prestado disponible</span></div>
+    <div class="menu-option"><i class="fas fa-key"></i><span>Cambiar contraseña</span></div>
+    <div class="menu-option"><i class="fas fa-undo"></i><span>Devolver producto</span></div>
+    <button class="logout-button">Cerrar sesión</button>
+  </div>
+
+  <div class="main-content cambiar-container">
+    <header class="cambiar-header">
+      <button class="menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+      <h1>Cambiar contraseña</h1>
+      <img src="../assets/logo.png" alt="Logo Arygatos" class="logo-header" />
+    </header>
+
+    <form class="form-card" id="formCambiar">
+      <label>Contraseña:</label>
+      <input type="password" required placeholder="Agregar texto" />
+
+      <label>Confirmar contraseña:</label>
+      <input type="password" required placeholder="Agregar texto" />
+
+      <label>Nueva contraseña:</label>
+      <input type="password" required placeholder="Agregar texto" />
+
+      <div class="form-buttons">
+        <a href="index.html" class="btn-red">Atrás</a>
+        <button type="submit" class="btn-green">Enviar</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("formCambiar");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      Swal.fire({
+        icon: 'success',
+        title: 'La solicitud fue enviada 🐱',
+        confirmButtonColor: '#62019e'
+      });
+
+      // Aquí se conectará al backend en Java posteriormente.
+    });
+  });
+</script>
+</html>
